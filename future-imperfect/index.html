@@ -477,7 +477,18 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<section id="intro">
 								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
 								<header>
-									<h2>Yessica Ramirez Cruz</h2>
+									<!--  <h2>Yessica Ramirez Cruz</h2> -->
+<h1><script type="text/javascript">
+window.setInterval (BlinkIt, 500);
+var color = "red";
+function BlinkIt () {
+var blink = document.getElementById ("blink");
+color = (color == "#ffffff")? "red" : "#ffffff";
+blink.style.color = color;
+blink.style.fontSize='36px';}
+</script>
+<div id="blink" onclick="parent.location='http://norfipc.com'">
+Yessica Ramirez Cruz</div></h1>
 									<p>Proyecto Libre de Programacion Web 2</a></p>
 								</header>
 							</section>
@@ -584,7 +595,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<!-- About -->
 							<section class="blurb">
 								<h2>About</h2>
-								<p>Yessica Ramirez Cruz, Estudiante del Instituto Tecnologico de Delicias, Tengo 22 años y vivo en Delicias, Chihuahua</p>
+								<p>Yessica Ramirez Cruz, Estudiante del Instituto Tecnologico de Delicias, Tengo 22 a&ntilde;os y vivo en Delicias, Chihuahua</p>
 							</section>
 
 						<!-- Footer -->
@@ -601,12 +612,48 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 			</div>
 
-		<!-- Scripts -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+<script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(dibujarGrafico);
+   function dibujarGrafico() {
+     var data = google.visualization.arrayToDataTable([
+       ['Texto', 'valores'],
+       ['Escuchar Musica', 25.15],
+       ['Leer', 10.15],
+       ['Hacer Ejercicio', 20.15],
+       ['Bailar', 15.15],
+       ['Pasar tiempo con mi familia', 25.15]   
+       ['Pasar tiempo con mis amigos', 25.15]
+
+     ]);
+     var options = {
+       title: 'Nuestro primer ejemplo con Google Charts'
+     }
+     // Dibujar el gráfico
+     new google.visualization.ColumnChart( 
+     //ColumnChart sería el tipo de gráfico a dibujar
+       document.getElementById('GraficoGoogleChart-ejemplo-1')
+     ).draw(data, options);
+   }
+ </script> 
+
+<!--Comenzando con Google Charts.... -->
+<div id="GraficoGoogleChart-ejemplo-1" style="width: 800px; height: 600px">
+<img src="https://chart.googleapis.com/chart?cht=p3&chs=400x200&chd=t:40,40,20&chl=Musica|Ejercicio|Leer&chco=0072c6|ef3886|ff9900&chtt=Hobbies" />
+</div>
+
+
+
+		<!-- Scripts  -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+
+
 
 	</body>
 </html>
